@@ -7,9 +7,9 @@ public interface ApplicationBodyService {
 	
 	public ApplicationBody saveApplicationBody(ApplicationBody body);
 	
-	public ApplicationBody getApplicationBody(int bodyId);
+	public ApplicationBody getApplicationBody(int id);
 	
-	public void deleteApplicationBody(int bodyId);
+	public void deleteApplicationBody(int id);
 	
 	public void deleteAllApplicationBody();
 

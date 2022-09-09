@@ -21,16 +21,17 @@ public class ApplicationBodyServiceImpl implements ApplicationBodyService {
 	
 	
 	@Override
-	public ApplicationBody getApplicationBody(int bodyId) {
-		return applicationBodyRepository.findById(bodyId).orElseThrow(()->
-				new NoSuchException("Application body is not found, id="+bodyId));
+	public ApplicationBody getApplicationBody(int id) {
+		ApplicationBody body =  applicationBodyRepository.findById(id).orElseThrow(()->
+				new NoSuchException("Application body is not found, id="+id));
+		return body;
 	};
 	
 	
 	@Override
-	public void deleteApplicationBody(int bodyId) {
-		getApplicationBody(bodyId);
-		applicationBodyRepository.deleteById(bodyId);
+	public void deleteApplicationBody(int id) {
+		getApplicationBody(id);
+		applicationBodyRepository.deleteById(id);
 		
 	};
 	

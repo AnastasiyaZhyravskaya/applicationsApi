@@ -28,14 +28,14 @@ public class ApplicationBodyController {
 	}
 	
 	@GetMapping("/bodys/{id}")
-	public ApplicationBody getApplicationBody(@PathVariable int bodyId){
-		return applicationBodyService.getApplicationBody(bodyId);
+	public ApplicationBody getApplicationBody(@PathVariable int id){
+		return applicationBodyService.getApplicationBody(id);
 	}
 	
 	@DeleteMapping("/bodys/{id}")
-	public String deleteApplicationBody(@PathVariable int bodyId){
-		applicationBodyService.deleteApplicationBody(bodyId);
-		return "ApplicationBody with id="+bodyId+" was deleted";
+	public String deleteApplicationBody(@PathVariable int id){
+		applicationBodyService.deleteApplicationBody(id);
+		return "Application body with id="+id+" was deleted";
 	}
 	
 	public String deleteAllBody(){
