@@ -10,8 +10,6 @@ public interface ApplicationStatusService {
 	public List<ApplicationStatus> getAllStatus();
 	
 	public ApplicationStatus saveStatus(ApplicationStatus status);
-	
-	public ApplicationStatus updateStatus(ApplicationStatus status);
 
 	public void deleteStatus(String status);
 	

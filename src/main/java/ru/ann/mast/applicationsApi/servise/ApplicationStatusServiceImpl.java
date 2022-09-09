@@ -29,13 +29,6 @@ public class ApplicationStatusServiceImpl implements ApplicationStatusService {
 		applicationStatusRepository.save(status);
 		return status;
 	}
-	
-	@Override
-	public ApplicationStatus updateStatus(ApplicationStatus status) {
-		if (applicationStatusRepository.findById(status.getStatus())==null) 
-			throw new NoSuchException("Status "+status.getStatus()+" is not found");
-		return applicationStatusRepository.save(status);
-	}
 
 
 	@Override
